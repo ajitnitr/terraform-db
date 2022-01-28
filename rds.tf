@@ -62,7 +62,7 @@ EOF
 
 resource "aws_route53_record" "mysql" {
   zone_id = data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTED_ZONE_ID
-  name    = "mysql-${var.ENV}.roboshop.internal"
+  name    = "mysql-${var.ENV}.ajitdevops-internal"
   type    = "CNAME"
   ttl     = "300"
   records = [aws_db_instance.default.address]
